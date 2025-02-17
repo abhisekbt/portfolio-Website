@@ -1,0 +1,378 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a.active {
+    color: #ff5733;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: #333 url('abhi.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+    margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 0.75rem 1.5rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #ff5733;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid #ff5733;
+    color: #ff5733;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+    opacity: 0.8;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.stat {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-category h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.project-filters {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    opacity: 0.8;
+}
+
+.project-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1rem;
+    color: #aaa;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus + label,
+.contact-form textarea:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.primary-btn {
+    margin-top: 2rem;
+    width: 200px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-logo {
+        font-size: 1.2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
